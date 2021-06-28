@@ -10,6 +10,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    try {
+      // all method from Values.js library generates tints and values for the base color - if passing 10 as the arg, will get 10 tints, 10 values, and the base color for an array of 21 elements
+      let colors = new Values(color).all(10);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
 
   return (
@@ -22,6 +29,7 @@ function App() {
             value={color}
             onChange={(e) => setColor(e.target.value)}
             placeholder="#2196f3"
+            className={`${error && 'error'}`}
           />
           {/* button within a form type is submit by default */}
           <button className="btn">Submit</button>
