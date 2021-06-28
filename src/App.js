@@ -8,7 +8,30 @@ function App() {
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
 
-  return <h2>color generator project</h2>;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <>
+      <section className="container">
+        <h3>Color Generator</h3>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            placeholder="#2196f3"
+          />
+          {/* button within a form type is submit by default */}
+          <button className="btn">Submit</button>
+        </form>
+        <section className="colors">
+          <h4>list here</h4>
+        </section>
+      </section>
+    </>
+  );
 }
 
 export default App;
