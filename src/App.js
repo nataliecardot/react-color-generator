@@ -29,6 +29,7 @@ function App() {
             value={color}
             onChange={(e) => setColor(e.target.value)}
             placeholder="#2196f3"
+            className={`${error && 'error'}`}
           />
           {/* button within a form type is submit by default */}
           <button className="btn">Submit</button>
