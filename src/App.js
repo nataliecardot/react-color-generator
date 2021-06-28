@@ -36,7 +36,10 @@ function App() {
           <button className="btn">Submit</button>
         </form>
         <section className="colors">
-          <h4>list here</h4>
+          {list.map((color, index) => {
+            console.log(color);
+            return <SingleColor key={index} {...color} index={index} />;
+          })}
         </section>
       </section>
     </>
