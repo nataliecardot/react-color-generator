@@ -13,6 +13,7 @@ function App() {
     try {
       // all method from Values.js library generates tints and values for the base color - if passing 10 as the arg, will get 10 tints, 10 values, and the base color for an array of 21 elements
       let colors = new Values(color).all(10);
+      setList(colors);
     } catch (error) {
       setError(true);
       console.log(error);
