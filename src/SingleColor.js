@@ -5,6 +5,7 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const [alert, setAlert] = useState(false);
   const bcg = rgb.join(); // comma is default separator
   // const hex = rgbToHex(...rgb);
+  const hexValue = `#${hexColor}`;
   // double curly braces explained here https://stackoverflow.com/a/51576729/8888320
   return (
     <article
@@ -12,7 +13,7 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
       style={{ backgroundColor: `rgb(${bcg})` }}
     >
       <p className="percent-value">{weight}%</p>
-      <p className="color-value">#{hexColor}</p>
+      <p className="color-value">{hexValue}</p>
     </article>
   );
 };
