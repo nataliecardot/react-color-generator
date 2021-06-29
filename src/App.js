@@ -35,12 +35,19 @@ function App() {
           {/* button within a form type is submit by default */}
           <button className="btn">Submit</button>
         </form>
-        <section className="colors">
-          {list.map((color, index) => {
-            console.log(color);
-            return <SingleColor key={index} {...color} index={index} />;
-          })}
-        </section>
+      </section>
+      <section className="colors">
+        {list.map((color, index) => {
+          console.log(color);
+          return (
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hexColor={color.hex}
+            />
+          );
+        })}
       </section>
     </>
   );
