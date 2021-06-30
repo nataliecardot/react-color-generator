@@ -6,6 +6,13 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const bcg = rgb.join(); // comma is default separator
   // const hex = rgbToHex(...rgb);
   const hexValue = `#${hexColor}`;
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+    // cleanup function
+    return () => clearTimeout(timeout);
+  }, [alert]);
   // double curly braces explained here https://stackoverflow.com/a/51576729/8888320
   return (
     <article
