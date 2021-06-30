@@ -1,6 +1,10 @@
 # react-color-generator
 
-Generate a range of colors (values: lighter colors - tints, and darker colors - shades) that are variations of a passed in hex value (serving as the base color). Additionally features functionality for copying to clipboard when a color is clicked - after it's copied, a textual alert is shown for two seconds. Visual feedback (a red input border) is provided in the case of an invalid hex code. A lighter font color is applied to text displayed on shades.
+Generate a range of colors (values: lighter colors - tints, and darker colors - shades) that are variations of a passed in hex value (serving as the base color).
+Additional features:
+
+- Includes functionality for copying to clipboard when a color is clicked - after it's copied, a textual alert is shown for two seconds. A message indicating text can be copied on click appears on hover.
+- Visual feedback (a red input border) is provided in the case of an invalid hex code. A lighter font color is applied to text displayed on shades.
 
 Color values are retrieved using the library [values.js](https://github.com/noeldelgado/values.js).
 

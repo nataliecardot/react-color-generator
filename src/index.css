@@ -194,6 +194,23 @@ input.error {
   font-size: 1rem;
   text-transform: none;
 }
+.hover-msg {
+  display: none;
+  transition: 1s;
+}
+.color:hover .hover-msg {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 .percent-value {
   margin-bottom: 0;
   color: var(--clr-grey-1);
