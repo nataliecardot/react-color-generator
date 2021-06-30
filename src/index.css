@@ -193,10 +193,21 @@ input.error {
   cursor: pointer;
   font-size: 1rem;
   text-transform: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hover-msg {
   display: none;
-  transition: 1s;
+  margin: auto;
+  font-size: 1.5em;
+}
+.color:hover .percent-value {
+  display: none;
+}
+.color:hover .color-value {
+  display: none;
 }
 .color:hover .hover-msg {
   display: block;
